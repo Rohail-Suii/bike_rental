@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import bike_logo from "../assets/bike-logo.jpeg";
-import Button from "./Button";
+import Button from "./childComponents/Button";
 import close from "../assets/close.svg";
 import menu from "../assets/menu.svg";
 
@@ -36,7 +36,7 @@ const Navbar = () => {
   //   bg-[color:var(--primary-color)]
   return (
     <div className="flex flex-row justify-between items-center p-3 m-5 navbar flex-auto flex-wrap">
-      <div className="flex flex-row ">
+      <div className="flex flex-row cursor-pointer">
         <img src={bike_logo} alt="logo" className="w-20 h-13 rounded-full" />
         <h6 className="px-3">
           <span className="font-bold text-xl">Bike</span> <br /> Rental
@@ -62,7 +62,7 @@ const Navbar = () => {
           Sign In
         </a>
         
-        <Button text={{ name: "Register" }}></Button>
+        <Button text= "Register"></Button>
       </div>
       <div className="sm:flex md:hidden justify-end items-center ">
         <img
