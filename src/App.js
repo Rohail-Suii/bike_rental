@@ -3,6 +3,8 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import BookingForm from './components/BookingForm';
+import Services from './components/Services';
+import RentalFleet from './components/RentalFleet';
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
       <Navbar />
       <Hero />
       <BookingForm />
+      <Services />
+      <RentalFleet />
     </div>
   );
 }

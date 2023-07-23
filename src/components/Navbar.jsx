@@ -4,6 +4,7 @@ import bike_logo from "../assets/bike-logo.jpeg";
 import Button from "./childComponents/Button";
 import close from "../assets/close.svg";
 import menu from "../assets/menu.svg";
+import register from "../assets/register.svg";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -62,7 +63,7 @@ const Navbar = () => {
           Sign In
         </a>
         
-        <Button text= "Register"></Button>
+        <Button text= "Register" image={register} ></Button>
       </div>
       <div className="sm:flex md:hidden justify-end items-center ">
         <img
