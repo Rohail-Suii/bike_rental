@@ -14,6 +14,7 @@ function App() {
       <BookingForm />
       <Services />
       <RentalFleet />
+      
     </div>
   );
 }
