@@ -24,7 +24,7 @@ const useDatePicker = () => {
   return { date, showCalendar, handleCalendarToggle, handleDateChange };
 };
 
-const BookingForm = () => {
+const BookingForm = ({idn}) => {
   const { date: pickupdate, showCalendar: showCalendar1, handleCalendarToggle: handleCalendarToggle1, handleDateChange: handlePickupdateChange } = useDatePicker();
   const { date: dropoffdate, showCalendar: showCalendar2, handleCalendarToggle: handleCalendarToggle2, handleDateChange: handleDropoffdateChange } = useDatePicker();
   const [modalOpen, setModalOpen] = useState(false);
@@ -33,7 +33,7 @@ const BookingForm = () => {
   const closeModal = () => setModalOpen(false);
 
   return (
-    <div className="mt-10 mb-10 border-t-4 mx-6 md:mx-12 shadow-2xl p-5">
+    <div id={idn} className="my-[220px] mb-10 border-t-4 mx-6 md:mx-12 shadow-2xl p-5">
       <div>
         <h1 className="text-center md:text-left mt-7 text-black font-bold text-xl">
           Book a bike

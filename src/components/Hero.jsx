@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 import Button from "./childComponents/Button";
 import hero_bike from "../assets/Hero-bike.png";
 import check from "../assets/check.svg";
@@ -18,7 +19,9 @@ const Hero = () => {
           </p>
         </div>
         <div className="flex flex-row space-x-4 mt-6">
-          <Button text="Book Ride" image={check} />
+          <Link to="bookingForm" smooth={true} duration={500} spy={true} activeClass="active">
+            <Button text="Book Ride" image={check} />
+          </Link>
           <Button text="Learn More" image={arrow_down} />
         </div>
       </div>
