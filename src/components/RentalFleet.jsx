@@ -59,9 +59,9 @@ const RentalFleet = () => {
 
   return (
     <div className="flex flex-col p-10 mt-16 ">
-      <div className="content mb-8">
-        <h1 className="text-2xl md:text-4xl font-semibold mb-5">Vehicle Models</h1>
-        <h1 className="text-3xl md:text-5xl font-bold mb-5">Our rental fleet</h1>
+      <div className="content mb-1">
+        <h1 className="text-black text-2xl md:text-4xl font-semibold mb-3">Vehicle Models</h1>
+        <h1 className="text-black text-3xl md:text-5xl font-bold mb-3">Our rental fleet</h1>
         <p className="mb-10">
           Choose from a variety of our amazing vehicles to rent for your next
           <br /> adventure or business trip
@@ -97,14 +97,14 @@ const RentalFleet = () => {
           <img src={selectedBike.image} alt="" className="w-[500px] h-[400px]" />
         </div>
         <div className="renttable ">
-          <h1>$50 / rent per day</h1>
+          <h1 className="bg-[color:var(--primary-color)] p-4 text-black">$50 / rent per day</h1>
           <table className="border-collapse border border-slate-400 ">
             <tbody className="border-solid border-black ">
               <tr>
-                <td className="border border-r-black px-5 py-3 w-[100px]">
+                <td className="border border-r-black px-5 py-3 w-[170px]  h-1">
                   Modal
                 </td>
-                <td className="border px-5 py-3 w-[150px]">{selectedBike.model}</td>
+                <td className="border px-5 py-3 w-[170px]  h-[100px]">{selectedBike.model}</td>
               </tr>
               <tr>
                 <td className="border border-r-black  px-5 py-3 ">

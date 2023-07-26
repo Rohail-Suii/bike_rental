@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 import Button from './childComponents/Button';
 import search from '../assets/search.svg';
-import ModalWindow from './childComponents/RegisterationModal';
+import ModalWindow from './childComponents/RegisterationModal'
 
 // Custom hook for handling date picker logic
 const useDatePicker = () => {
@@ -31,7 +31,6 @@ const BookingForm = ({idn}) => {
 
   const openModal = () => setModalOpen(true);
   const closeModal = () => setModalOpen(false);
-
   return (
     <div id={idn} className="my-[220px] mb-10 border-t-4 mx-6 md:mx-12 shadow-2xl p-5">
       <div>
@@ -175,15 +174,13 @@ const BookingForm = ({idn}) => {
             </div>
           )}
         </div>
-        <div className="mt-4 bg-black h-10">
-          <Button text="Search" image={search} onClick={openModal} />
+        <div className="bg-black h-10 cursor-pointer" onClick={openModal}>
+          <Button text="Search" image={search} />
         </div>
       </div>
 
-      {/* Create a modal window */}
       <ModalWindow isOpen={modalOpen} onClose={closeModal}>
-        <h2>Modal Content</h2>
-        <p>This is the content of the modal.</p>
+      
       </ModalWindow>
     </div>
   );

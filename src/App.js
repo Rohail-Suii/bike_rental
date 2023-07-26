@@ -5,6 +5,8 @@ import Hero from "./components/Hero";
 import BookingForm from "./components/BookingForm";
 import Services from "./components/Services";
 import RentalFleet from "./components/RentalFleet";
+import FAQ from "./components/FAQ";
+import Download from "./components/Download";
 
 function App() {
    return (
@@ -16,6 +18,8 @@ function App() {
          </div>
          <Services />
          <RentalFleet />
+         <FAQ />
+         <Download />
       </div>
    );
 }
