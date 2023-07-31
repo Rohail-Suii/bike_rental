@@ -5,6 +5,7 @@ import Button from "./childComponents/Button";
 import close from "../assets/close.svg";
 import menu from "../assets/menu.svg";
 import register from "../assets/register.svg";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
    const [toggle, setToggle] = useState(false);
@@ -12,26 +13,32 @@ const Navbar = () => {
       {
          id: 1,
          name: "Home",
+         path: "/",
       },
       {
          id: 2,
          name: "About",
+         path: "/about",
       },
       {
          id: 3,
          name: "Bike Models",
+         path: "/bikes",
       },
       {
          id: 4,
          name: "Testimonails",
+         path: "/testimonials",
       },
       {
          id: 5,
          name: "Our Team",
+         path: "/team",
       },
       {
          id: 6,
          name: "Contact",
+         path: "/contact",
       },
    ];
    //   bg-[color:var(--primary-color)]
@@ -54,7 +61,7 @@ const Navbar = () => {
                      key={item.id}
                      className="mr-4 font-semibold hover:text-[color:var(--primary-color)] hover:scale-105 transform transition-all"
                   >
-                     <a href={`#`}><h1 className="hover:text-[color:var(--primary-color)]">{item.name}</h1></a>
+                     <Link to={item.path}><h1 className="hover:text-[color:var(--primary-color)]">{item.name}</h1></Link>
                   </li>
                ))}
             </ul>

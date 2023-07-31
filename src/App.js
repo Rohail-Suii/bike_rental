@@ -4,17 +4,21 @@ import {
    Route,
    Navigate,
    Routes,
+   Link ,
 } from "react-router-dom";
 
 import MainPage from "./pages/MainPage";
-
+import AboutPage from "./pages/AboutPage";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 const App = () => {
    return (
       <Router>
-         <MainPage />
+         <Navbar />
          <main>
             <Routes>
-               {/* <Route path="/" element={<MainPage />} exact></Route> */}
+               <Route path="/" element={<MainPage />} exact></Route>
+               <Route path="/about" element={<AboutPage />} exact></Route>
 
                {/* <Route
                   path="/:userId/places"
@@ -24,6 +28,7 @@ const App = () => {
                <Route path="/places/new" element={<NewPlace />} exact></Route> */}
             </Routes>
          </main>
+         <Footer />
       </Router>
    );
 };
