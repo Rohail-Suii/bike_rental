@@ -60,9 +60,9 @@ const RentalFleet = () => {
   return (
     <div className="flex flex-col p-10 mt-16 ">
       <div className="content mb-1">
-        <h1 className="text-black text-2xl md:text-4xl font-semibold mb-3">Vehicle Models</h1>
-        <h1 className="text-black text-3xl md:text-5xl font-bold mb-3">Our rental fleet</h1>
-        <p className="mb-10">
+        <h1 className="text-black text-2xl md:text-4xl text-center font-semibold mb-3">Vehicle Models</h1>
+        <h1 className="text-black text-3xl md:text-5xl text-center font-bold mb-3">Our rental fleet</h1>
+        <p className="mb-10 text-center">
           Choose from a variety of our amazing vehicles to rent for your next
           <br /> adventure or business trip
         </p>

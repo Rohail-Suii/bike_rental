@@ -1,27 +1,31 @@
-import logo from "./logo.svg";
-import "./App.css";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import BookingForm from "./components/BookingForm";
-import Services from "./components/Services";
-import RentalFleet from "./components/RentalFleet";
-import FAQ from "./components/FAQ";
-import Download from "./components/Download";
+import React, { Fragment } from "react";
+import {
+   BrowserRouter as Router,
+   Route,
+   Navigate,
+   Routes,
+} from "react-router-dom";
 
-function App() {
+import MainPage from "./pages/MainPage";
+
+const App = () => {
    return (
-      <div className="App">
-         <Navbar />
-         <Hero />
-         <div className="mt-10">
-            <BookingForm idn="bookingForm" />
-         </div>
-         <Services />
-         <RentalFleet />
-         <FAQ />
-         <Download />
-      </div>
+      <Router>
+         <MainPage />
+         <main>
+            <Routes>
+               {/* <Route path="/" element={<MainPage />} exact></Route> */}
+
+               {/* <Route
+                  path="/:userId/places"
+                  element={<UserPlaces />}
+                  exact
+               ></Route>
+               <Route path="/places/new" element={<NewPlace />} exact></Route> */}
+            </Routes>
+         </main>
+      </Router>
    );
-}
+};
 
 export default App;

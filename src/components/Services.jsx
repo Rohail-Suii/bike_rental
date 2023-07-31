@@ -7,8 +7,8 @@ const Services = () => {
   return (
     <div className="flex flex-col mx-4 md:mx-12 mt-12 md:mt-24 ">
       <div>
-        <h6 className="text-2xl md:text-4xl font-medium text-black p-6">Plan your trip now</h6>
-        <h1 className="text-4xl md:text-6xl font-semibold text-black p-6">Quick & easy bike rental</h1>
+        <h6 className="text-2xl md:text-4xl text-center font-medium text-black p-6">Plan your trip now</h6>
+        <h1 className="text-4xl md:text-6xl text-center font-semibold text-black p-6">Quick & easy bike rental</h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 md:mt-12">
         <div className="flex flex-col justify-center items-center">

@@ -54,7 +54,7 @@ const Navbar = () => {
                      key={item.id}
                      className="mr-4 font-semibold hover:text-[color:var(--primary-color)] hover:scale-105 transform transition-all"
                   >
-                     <a href={`#`}>{item.name}</a>
+                     <a href={`#`}><h1 className="hover:text-[color:var(--primary-color)]">{item.name}</h1></a>
                   </li>
                ))}
             </ul>
