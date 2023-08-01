@@ -25,11 +25,7 @@ const Navbar = () => {
          name: "Bike Models",
          path: "/bikes",
       },
-      {
-         id: 4,
-         name: "Testimonails",
-         path: "/testimonials",
-      },
+     
       {
          id: 5,
          name: "Our Team",
@@ -88,14 +84,14 @@ const Navbar = () => {
         absolute top-20 right-0 mx-4 
         my-2 min-w-[140px] rounded-xl sidebar`}
             >
-               <ul className="flex flex-col">
+               <ul className="flex flex-col text-right space-y-3 bg-white items-center">
                   {navlinks.map((item) => (
                      <li
-                        key={item.id}
-                        className="py-3 font-semibold hover:text-[color:var(--primary-color)] hover:scale-105 transform transition-all"
-                     >
-                        <a href={`#${item.id}`}>{item.name}</a>
-                     </li>
+                     key={item.id}
+                     className="mr-4  font-semibold hover:text-[color:var(--primary-color)] hover:scale-105 transform transition-all"
+                  >
+                     <Link to={item.path}><h1 className="hover:text-[color:var(--primary-color)] ">{item.name}</h1></Link>
+                  </li>
                   ))}
                </ul>
             </div>

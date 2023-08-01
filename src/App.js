@@ -11,6 +11,9 @@ import MainPage from "./pages/MainPage";
 import AboutPage from "./pages/AboutPage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Bikes from "./pages/Bikes";
+import ContactPage from "./pages/ContactPage";
+import TeamPage from "./pages/TeamPage";
 const App = () => {
    return (
       <Router>
@@ -19,7 +22,9 @@ const App = () => {
             <Routes>
                <Route path="/" element={<MainPage />} exact></Route>
                <Route path="/about" element={<AboutPage />} exact></Route>
-
+               <Route path="/bikes" element={<Bikes />} exact></Route>
+               <Route path="/contact" element={<ContactPage />} exact></Route>
+               <Route path="/team" element={<TeamPage />} exact></Route>
                {/* <Route
                   path="/:userId/places"
                   element={<UserPlaces />}

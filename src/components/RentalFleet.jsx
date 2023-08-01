@@ -97,7 +97,7 @@ const RentalFleet = () => {
           <img src={selectedBike.image} alt="" className="w-[500px] h-[400px]" />
         </div>
         <div className="renttable ">
-          <h1 className="bg-[color:var(--primary-color)] p-4 text-black">$50 / rent per day</h1>
+          <h1 className="bg-[color:var(--primary-color)] p-4 text-center text-black">$50 / rent per day</h1>
           <table className="border-collapse border border-slate-400 ">
             <tbody className="border-solid border-black ">
               <tr>
