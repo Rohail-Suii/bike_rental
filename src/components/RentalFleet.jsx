@@ -7,7 +7,6 @@ import bike5img from "../assets/Bikes/Honda 5.png";
 import key from "../assets/key.png";
 import Button from "./childComponents/Button";
 import { Link } from "react-router-dom";
-
 const bikeData = [
   {
     image: bike1img,
@@ -152,7 +151,7 @@ const RentalFleet = () => {
             </tbody>
           </table>
           <div className="">
-            <Link to="/">
+          <Link to="/bookingForm" smooth={true} duration={500} spy={true} activeClass="active">
               <Button text="RENT NOW " image={key} />
             </Link>
           </div>

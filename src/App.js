@@ -14,6 +14,7 @@ import Footer from "./components/Footer";
 import Bikes from "./pages/Bikes";
 import ContactPage from "./pages/ContactPage";
 import TeamPage from "./pages/TeamPage";
+import BookingForm from "./components/BookingForm";
 const App = () => {
    return (
       <Router>
@@ -25,6 +26,8 @@ const App = () => {
                <Route path="/bikes" element={<Bikes />} exact></Route>
                <Route path="/contact" element={<ContactPage />} exact></Route>
                <Route path="/team" element={<TeamPage />} exact></Route>
+               <Route path="/bookingForm" element={<BookingForm/>} exact> </Route>
+
                {/* <Route
                   path="/:userId/places"
                   element={<UserPlaces />}
