@@ -17,7 +17,7 @@ const Download = () => {
                   becomes your trusted ally
                </p>
             </div>
-            <div className="img flex flex-row space-x-5 mt-9 ">
+            <div className="img flex flex-col lg:flex-row space-x-5 mt-9 ">
                <img src={google} alt="" />
                <img src={app} alt="" />
             </div>
