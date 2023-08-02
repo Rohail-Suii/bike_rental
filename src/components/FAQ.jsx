@@ -1,9 +1,10 @@
 import React from "react";
+
 import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import hero_bike from "../assets/bg-harley.jpg";
 export default function FAQ() {
    return (
-      <div className=" mt-32  shadow-sm mx-4 mb-5 bg-cover bg-center " style={{ backgroundImage: `url(${hero_bike})` }}>
+      <div className=" mt-32  shadow-sm md:mx-4 mb-5 bg-cover bg-center " style={{ backgroundImage: `url(${hero_bike})` }}>
          <h1 className="text-[40px] text-black text-center font-bold p-4  mb-10 bg-white ">
             Frequently Asked Questions
          </h1>
@@ -11,12 +12,12 @@ export default function FAQ() {
             Frequently Asked Questions About the Bike Rental Booking Process on
             Our Website: <br /> Answers to Common Concerns and Inquiries.
          </p> */}
-         <div className="bg-transparent mx-2  md:mx-9 px-10 text-black"
+         <div className="bg-transparent mx-2  md:mx-9 md:px-10 text-black"
          >
             <MDBAccordion
                flush
                initialActive={1}
-               className="m-10 text-black font-bold bg-white"
+               className="md:m-10 text-black font-bold bg-white"
             >
                <MDBAccordionItem
                   collapseId={1}

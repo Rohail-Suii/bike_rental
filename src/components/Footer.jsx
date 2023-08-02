@@ -16,29 +16,29 @@ const Footer = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
                <div className="col-span-1 mb-4 sm:mb-0">
                   <h4 className="text-xl font-bold mb-4">Services</h4>
-                  <a href="#" className="text-white cursor-pointer block mb-2">
-                     <h1 className="hover:text-black">Bike Rentals</h1>
+                  <a href="#" className="text-white block mb-2">
+                     <h1 className="hover:text-black inline cursor-pointer">Bike Rentals</h1>
                   </a>
-                  <a href="#" className="text-white cursor-pointer block mb-2">
-                     <h1 className="hover:text-black">Bike Tours</h1>
+                  <a href="#" className="text-white block mb-2">
+                     <h1 className="hover:text-black inline cursor-pointer">Bike Tours</h1>
                   </a>
-                  <a href="#" className="text-white cursor-pointer block mb-2">
-                     <h1 className="hover:text-black">Bike Repair</h1>
+                  <a href="#" className="text-white block mb-2">
+                     <h1 className="hover:text-black inline cursor-pointer">Bike Repair</h1>
                   </a>
                </div>
                <div className="col-span-1 mb-4 sm:mb-0">
                   <h4 className="text-xl font-bold mb-4">Locations</h4>
-                  <a href="#" className="text-white cursor-pointer block mb-2">
-                     <h1 className="hover:text-black">Lahore</h1>
+                  <a href="#" className="text-white  block mb-2">
+                     <h1 className="hover:text-black inline cursor-pointer">Lahore</h1>
                   </a>
-                  <a href="#" className="text-white cursor-pointer block mb-2">
-                     <h1 className="hover:text-black">Islamabad</h1>
+                  <a href="#" className="text-white  block mb-2">
+                     <h1 className="hover:text-black inline cursor-pointer">Islamabad</h1>
                   </a>
-                  <a href="#" className="text-white cursor-pointer block mb-2">
-                     <h1 className="hover:text-black">Attock</h1>
+                  <a href="#" className="text-white  block mb-2">
+                     <h1 className="hover:text-black inline cursor-pointer">Attock</h1>
                   </a>
-                  <a href="#" className="text-white cursor-pointer block mb-2">
-                     <h1 className="hover:text-black">Kashmir</h1>
+                  <a href="#" className="text-white block mb-2">
+                     <h1 className="hover:text-black inline cursor-pointer">Kashmir</h1>
                   </a>
                </div>
                <div className="col-span-1 mb-4 sm:mb-0">

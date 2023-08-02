@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import bike1img from "../assets/Bikes/Honda 1.png";
 import bike2img from "../assets/Bikes/Honda 2.png";
 import bike3img from "../assets/Bikes/Honda 3.png";
@@ -6,6 +6,7 @@ import bike4img from "../assets/Bikes/Honda 4.png";
 import bike5img from "../assets/Bikes/Honda 5.png";
 import key from "../assets/key.png";
 import Button from "./childComponents/Button";
+import { Link } from "react-router-dom";
 
 const bikeData = [
   {
@@ -51,6 +52,18 @@ const bikeData = [
 ];
 
 const RentalFleet = () => {
+  const preloadImages = () => {
+    bikeData.forEach((bike) => {
+      const img = new Image();
+      img.src = bike.image;
+    });
+  };
+
+  // Call the preloadImages function in the useEffect hook.
+  useEffect(() => {
+    preloadImages();
+  }, []);
+
   const [selectedBike, setSelectedBike] = useState(bikeData[0]);
 
   const handleBikeSelection = (index) => {
@@ -67,7 +80,7 @@ const RentalFleet = () => {
           <br /> adventure or business trip
         </p>
       </div>
-      <div className="row1 flex flex-col md:flex-row justify-between">
+      <div className="row1 flex flex-col lg:flex-row justify-between">
         <div className="bikenames">
           <ul className="">
             {bikeData.map((bike, index) => (
@@ -93,18 +106,18 @@ const RentalFleet = () => {
             ))}
           </ul>
         </div>
-        <div className="images">
-          <img src={selectedBike.image} alt="" className="w-[500px] h-[400px]" />
+        <div className="images justify-center flex">
+          <img src={selectedBike.image} alt="" className="md:w-[500px] md:my-0 md:h-[400px] w-[300px] h-[200px] my-4" />
         </div>
-        <div className="renttable ">
-          <h1 className="bg-[color:var(--primary-color)] p-4 text-center text-black">$50 / rent per day</h1>
-          <table className="border-collapse border border-slate-400 ">
+        <div className="renttable w-full lg:w-1/4">
+          <h1 className="bg-[color:var(--primary-color)] p-4 text-center text-black ">$50 / rent per day</h1>
+          <table className="border-collapse border border-slate-400 w-full">
             <tbody className="border-solid border-black ">
               <tr>
-                <td className="border border-r-black px-5 py-3 w-[170px]  h-1">
+                <td className="border border-r-black px-5 py-3  h-1">
                   Modal
                 </td>
-                <td className="border px-5 py-3 w-[170px]  h-[100px]">{selectedBike.model}</td>
+                <td className="border px-5 py-3 ">{selectedBike.model}</td>
               </tr>
               <tr>
                 <td className="border border-r-black  px-5 py-3 ">
@@ -138,7 +151,12 @@ const RentalFleet = () => {
               </tr>
             </tbody>
           </table>
-          <Button text="RENT NOW " image={key} />
+          <div className="">
+            <Link to="/">
+              <Button text="RENT NOW " image={key} />
+            </Link>
+          </div>
+
         </div>
       </div>
     </div>

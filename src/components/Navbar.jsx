@@ -9,6 +9,9 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
    const [toggle, setToggle] = useState(false);
+   const handleToggle = () => {
+      setToggle((prevState) => !prevState);
+   };
    const navlinks = [
       {
          id: 1,
@@ -25,7 +28,7 @@ const Navbar = () => {
          name: "Bike Models",
          path: "/bikes",
       },
-     
+
       {
          id: 5,
          name: "Our Team",
@@ -79,19 +82,14 @@ const Navbar = () => {
                className="w-[24px] h-[24px] object-contain bg-stone-700"
                onClick={() => setToggle((prev) => !prev)}
             />
-            <div
-               className={`${toggle ? "flex" : "hidden"} p-6
-        absolute top-20 right-0 mx-4 
-        my-2 min-w-[140px] rounded-xl sidebar`}
-            >
-               <ul className="flex flex-col text-right space-y-3 bg-white items-center">
+            <div className={`p-6 absolute top-20  right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar ${toggle ? 'animate-move-down' : ''}`}>
+               <ul className={`flex flex-col  space-y-3 bg-gray-400 rounded-2xl p-1 justify-center items-center ${toggle ? 'flex' : 'hidden'}`}>
                   {navlinks.map((item) => (
-                     <li
-                     key={item.id}
-                     className="mr-4  font-semibold hover:text-[color:var(--primary-color)] hover:scale-105 transform transition-all"
-                  >
-                     <Link to={item.path}><h1 className="hover:text-[color:var(--primary-color)] ">{item.name}</h1></Link>
-                  </li>
+                     <li key={item.id} className=" font-semibold hover:text-[color:var(--primary-color)] hover:scale-105 transform transition-all">
+                        <Link to={item.path}>
+                           <h1 className="hover:text-[color:var(--primary-color)] text-white p-1">{item.name}</h1>
+                        </Link>
+                     </li>
                   ))}
                </ul>
             </div>

@@ -17,9 +17,9 @@ const Download = () => {
                   becomes your trusted ally
                </p>
             </div>
-            <div className="img flex flex-col lg:flex-row space-x-5 mt-9 ">
-               <img src={google} alt="" />
-               <img src={app} alt="" />
+            <div className="img flex flex-col items-center justify-center lg:flex-row lg:space-x-5 mt-9 ">
+               <img src={google} alt="" className="cursor-pointer"/>
+               <img src={app} alt="" className="cursor-pointer"/>
             </div>
          </div>
          <div
